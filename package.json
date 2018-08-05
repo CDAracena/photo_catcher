@@ -4,6 +4,7 @@
   "dependencies": {
     "bulma": "^0.7.1",
     "bulma-toast": "^1.0.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1"
   }
 }

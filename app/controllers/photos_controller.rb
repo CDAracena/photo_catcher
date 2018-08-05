@@ -1,15 +1,24 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-
-  end
-
-  def create
+    @photos = Photo.all
 
   end
 
   def new
+    @photo = Photo.new
+    @photos = Photo.all
 
   end
+
+
+  def create
+    photo = Photo.create(photo_params)
+    redirect_to photos_path
+
+  end
+
 
   def edit
 
@@ -30,6 +39,6 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:title, :description)
+    params.require(:photo).permit(:title, :description, :image)
   end
 end
