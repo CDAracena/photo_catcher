@@ -2,9 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Photo Catcher</title>
   </head>
   <body>
-    Testing
+    <%= link_to 'create photo', new_photo_path %>
+    <h1>Hello <%=current_user.email %></h1>
+
   </body>
 </html>

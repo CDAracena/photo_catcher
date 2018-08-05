@@ -1,0 +1,10 @@
+<% @photos.each do |photo| %>
+
+<div class="columns">
+  <div class="column" >
+  <%= photo.title %>
+  <%= photo.description %>
+  <%= image_tag(photo.image, style:'width:50%') %>
+</div>
+</div>
+<%end%>
