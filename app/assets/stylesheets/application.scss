@@ -12,7 +12,40 @@
  *
  *= require bulma/css/bulma.css
  *= require bulma-toast/dist/css/bulma-toast.min.css
- *= require font-awesome/css/font-awesome.min.css
  *= require_tree .
  *= require_self
  */
+
+.navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+}
+
+.navLogo{
+  padding-right: 10px;
+}
+.navbar-start{
+  align-items: center;
+}
+
+.sign-in-link {
+  padding-right: 5px;
+}
+
+.navbar-menu {
+  color: #0000006b;
+}
+
+.navbar-menu a:link, a:visited {
+  color: #0000006b;
+  transition: all .1s ease-in;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.navbar-menu a:hover {
+  color: #000000c4;
+}
