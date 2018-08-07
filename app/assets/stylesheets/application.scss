@@ -20,6 +20,7 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   align-items: center;
+  box-shadow: 1px 1px 1px 1px lightgrey;
 }
 
 .navLogo{
@@ -27,14 +28,25 @@
 }
 .navbar-start{
   align-items: center;
+
 }
 
 .sign-in-link {
   padding-right: 5px;
+  color: #0000006b;
+  transition: all .1s ease-in;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
 }
 
 .navbar-menu {
   color: #0000006b;
+}
+
+.sign-in-link:hover{
+  color: #000000c4;
 }
 
 .navbar-menu a:link, a:visited {
@@ -48,4 +60,8 @@
 
 .navbar-menu a:hover {
   color: #000000c4;
+}
+
+.navContainer {
+  margin-bottom: 7.5rem;
 }
