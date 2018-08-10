@@ -7,14 +7,15 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @photo = Photo.new
-    @photos = Photo.all
+  @user = User.find(current_user.id)
+  @photo = Photo.new
 
   end
 
 
   def create
-    photo = Photo.create(photo_params)
+    @user = User.find(current_user.id)
+    @user.photos.create(photo_params)
     redirect_to photos_path
 
   end
@@ -39,6 +40,6 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:title, :description, :image)
+    params.require(:photo).permit(:title, :description, :image, :user_id)
   end
 end

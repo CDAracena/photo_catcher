@@ -2,23 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .about-user {
   border-bottom: 1px solid #d3d3d3bf;
   padding-bottom: 25px;
   margin: 25px 40px;
 }
 
-.user-full-name{
+.user-full-name {
   border-bottom: 1px solid #d3d3d3bf;
   padding-bottom: 25px;
   margin: 25px 40px;
 }
 
 .photoContainer {
-  padding: 0px 25px 0px 25px;
+  padding: 0 25px;
 }
 
-.addPhotoLink{
-  float:right;
+.addPhotoLink {
+  float: right;
+  color: #0000006b;
+  transition: all 0.2s ease-in;
+}
+
+.photo {
+  transition: all 0.2s ease-in-out;
+}
+
+.photo:hover {
+  box-shadow: 2px 2px 10px 2px #a2a2a2;
+  cursor:pointer;
 }

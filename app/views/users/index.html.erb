@@ -27,8 +27,16 @@
           <span>
             Gallery
           </span>
-          <span><%=link_to 'Add New Photo', new_photo_path, class:'addPhotoLink' %></span>
+          <span><%=link_to 'Add New Photo', new_photo_path, class:'addPhotoLink' %>
+          <%=fa_icon 'plus', class:'addPhotoLink'%></span>
         </div>
+      </div>
+      <div class="columns">
+        <% current_user.photos.each do |photo| %>
+        <div class="column is-one-third">
+          <%= image_tag(photo.image, class:'photo') %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
