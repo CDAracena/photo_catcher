@@ -2,8 +2,15 @@
   <% if user_signed_in? %>
   <div class="columns">
     <div class="column">
-      Testing
+      Most Recent Uploads
     </div>
+  </div>
+  <div class="columns">
+    <% @photos.each do |photo| %>
+    <div class="column is-one-quarter">
+      <%= image_tag(photo.image, class:'photo')%>
+    </div>
+    <% end %>
   </div>
   <% else %>
   <div class="columns has-text-left">
