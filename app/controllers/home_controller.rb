@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @user = User.all.order("created_at DESC")
+    @users = User.all.last(3)
     @photos = Photo.all.last(4)
   end
 end

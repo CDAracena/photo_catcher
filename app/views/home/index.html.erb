@@ -5,10 +5,25 @@
       Most Recent Uploads
     </div>
   </div>
-  <div class="columns">
+  <div class="columns recentUploadsRow">
     <% @photos.each do |photo| %>
     <div class="column is-one-quarter">
       <%= image_tag(photo.image, class:'photo')%>
+    </div>
+    <% end %>
+  </div>
+  <div class="columns">
+    <div class="column">
+      Newest Members
+    </div>
+  </div>
+  <div class="columns has-text-centered newMemberRow">
+    <% @users.each do |user| %>
+    <div class="column is-one-quarter">
+    <%= user.username %>
+    <% if user.avatar.attached? %>
+    <div><%= image_tag(user.avatar) %></div>
+    <% end %>
     </div>
     <% end %>
   </div>
