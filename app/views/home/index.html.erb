@@ -1,0 +1,23 @@
+<div class="container">
+  <% if user_signed_in? %>
+  <div class="columns">
+    <div class="column">
+      Testing
+    </div>
+  </div>
+  <% else %>
+  <div class="columns has-text-left">
+    <div class="column">Sign Up Now! Share your photos with the world!</div>
+  </div>
+  <div class="columns has-text-right">
+    <div class="column">
+      Join the best online gallery community today!
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <%= link_to 'Create An Account!', new_user_registration_path %>
+    </div>
+  </div>
+  <% end %>
+</div>

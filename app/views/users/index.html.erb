@@ -10,9 +10,10 @@
       <%= image_tag(current_user.avatar)%>
       <p class="user-full-name">
         <%=current_user.f_name %>
-        <%=current_user.l_name %><br>
-        <%=current_user.email %><br>
-        No. of Photos
+        <%=current_user.l_name %><br/>
+        <%=current_user.email %><br/>
+        No. of Photos: <%= current_user.photos.count %>
+
       </p>
       <p class="about-user"><%= current_user.about %></p>
       <div>
