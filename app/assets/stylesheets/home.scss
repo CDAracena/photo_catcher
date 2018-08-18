@@ -13,3 +13,11 @@
   border-radius: 25px;
   justify-content: space-around;
 }
+
+.user-avatar-img{
+  transition: all 0.8s ease-in-out;
+}
+
+.user-avatar-img:hover {
+  transform: rotateY(360deg);
+}

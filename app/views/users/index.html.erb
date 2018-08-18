@@ -35,7 +35,10 @@
       <div class="columns">
         <% current_user.photos.each do |photo| %>
         <div class="column is-one-third">
+          <%= link_to photo_path(photo) do %>
           <%= image_tag(photo.image, class:'photo') %>
+          <% end %>
+          <%= photo.title %> <%= link_to 'Edit', edit_photo_path(photo), class:'edit-link' %>  
         </div>
         <% end %>
       </div>
