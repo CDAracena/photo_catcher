@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="columns is-centered has-text-centered">
+    <div class="column">
+      <h1>Welcome To
+        <%=@user.username%></h1>'s Gallery
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-one-fifth has-text-centered">
+      <%= image_tag(@user.avatar)%>
+      <p class="user-full-name">
+        <%=@user.f_name %>
+        <%=@user.l_name %><br/>
+        <%=@user.email %><br/>
+        No. of Photos: <%= @user.photos.count %>
+
+      </p>
+      <p class="about-user"><%= @user.about %></p>
+      <div>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+    <div class="column photoContainer">
+      <div class="columns topNav">
+        <div class="column topNavCol">
+          <span>
+            Gallery
+          </span>
+        </div>
+      </div>
+      <div class="columns">
+        <% @user.photos.each do |photo| %>
+        <div class="column is-one-third">
+          <%= link_to photo_path(photo) do %>
+          <%= image_tag(photo.image, class:'photo') %>
+          <% end %>
+          <%= photo.title %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
