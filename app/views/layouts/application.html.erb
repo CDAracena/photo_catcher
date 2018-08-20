@@ -32,8 +32,15 @@
             <%=link_to 'Profile', users_path%>
             <%= fa_icon "address-card" %>
           </div>
-        </div>
+          <div class="navbar-item sign-in-link">
+            <%=link_to 'Gallery', photos_path %>
+            <%=fa_icon "images" %>
+          </div>
+            </div>
         <div class="navbar-end">
+          <div class="navbar-item">
+            <%= link_to 'My Account', edit_user_path(current_user) %>
+          </div>
           <div class="navbar-item sign-in-link">
             <%=link_to 'Sign Out', destroy_user_session_path, method: :delete %>
             <%=fa_icon 'sign-out-alt'%>

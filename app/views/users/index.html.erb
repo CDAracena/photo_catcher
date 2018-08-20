@@ -32,13 +32,14 @@
           <%=fa_icon 'plus', class:'addPhotoLink'%></span>
         </div>
       </div>
-      <div class="columns">
+      <div class="columns is-multiline">
         <% current_user.photos.each do |photo| %>
         <div class="column is-one-third">
           <%= link_to photo_path(photo) do %>
           <%= image_tag(photo.image, class:'photo') %>
           <% end %>
-          <%= photo.title %> <%= link_to 'Edit', edit_photo_path(photo), class:'edit-link' %>  
+          <%= photo.title %> <%= link_to 'Edit', edit_photo_path(photo), class:'edit-link' %>
+          <span> <%=fa_icon 'trash', class:'delete-photo'%> </span>
         </div>
         <% end %>
       </div>
