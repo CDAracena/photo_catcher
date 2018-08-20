@@ -1,0 +1,37 @@
+<% if current_user.id === @photo.user.id %>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-three-fifths">
+      <%= form_for @photo do |f| %>
+      <div class="field">
+        <%= image_tag(@photo.image) %>
+      </div>
+      <div class="field">
+        <%= f.label :title %><br/>
+        <div class="control has-icons-left">
+          <%= f.text_field :title, class:'input' %>
+          <span class="icon is-small is-left">
+            <i class="fas fa-pencil-alt"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :description%><br/>
+        <div class="control has-icons-left">
+          <%= f.text_area :description, class:'input' %>
+          <span class="icon is-small is-left">
+            <i class="fas fa-pencil-alt"></i>
+          </span>
+        </div>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Save Changes' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% else %>
+
+Nice Try Loser
+<% end %>
+</div>

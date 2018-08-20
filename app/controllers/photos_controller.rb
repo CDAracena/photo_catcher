@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @photos = Photo.all
+    @photos = Photo.all.sort_by(&:created_at).reverse
 
   end
 
@@ -22,15 +22,24 @@ class PhotosController < ApplicationController
 
 
   def edit
+    @photo = Photo.find(params[:id])
+    @user = current_user
 
   end
 
   def show
     @photo = Photo.find(params[:id])
 
+    if Photo.find(params[:id]).user.photos.count > 2
+    @recent_photos = Photo.find(params[:id]).user.photos.first(2)
+  end
+
   end
 
   def update
+    photo = Photo.find(params[:id]);
+    photo.update(photo_params)
+    redirect_to user_path(photo.user)
 
   end
 
