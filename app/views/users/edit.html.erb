@@ -38,7 +38,7 @@
         <%= f.text_area :about, class:'textarea' %>
       </div>
     </div>
-    <%= f.submit 'Submit Changes' %>
+    <%= f.submit 'Submit Changes' %> <span> <%= link_to 'Change Password?', edit_user_password_path(@user) %>
     <% end %>
   </div>
 </div>
