@@ -16,6 +16,10 @@
  *= require_self
  */
 
+ body {
+   font-family: 'Slabo 13px', serif;
+ }
+
 .navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -63,5 +67,66 @@
 }
 
 .navContainer {
-  margin-bottom: 7.5rem;
+  margin-bottom: 7.0rem;
+}
+
+.main-login-container {
+  background-color: #228be6;
+  color: whitesmoke;
+  height: 100vh;
+  font-family: 'Slabo 13px', serif;
+}
+
+.intro-text-row{
+align-items: center;
+}
+
+.loginBtns{
+  padding: 15px;
+  width: 90%;
+  color: whitesmoke;
+  background-color: #228be6;
+  box-shadow: 1px 3px 1px 1px #228be65e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+.loginBtns:hover{
+  background-color:#083964;
+}
+
+.login-box{
+  border: 1px solid whitesmoke;
+    color: #00000091;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 3px 2px 0px lightgrey;
+    transition: all 0.5s ease-in;
+}
+
+.login-box:hover{
+  color:#000000c2;
+}
+
+.sign-in-sentence{
+  color: #00000091;
+}
+
+.newUserIntroContainer{
+background-color: #228be6;
+color: whitesmoke;
+transition: all 0.2s ease-in;
+padding: 50px;
+
+}
+.newUserIntroContainer a{
+  color:whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.newUserIntroContainer a:hover{
+  color: #083964;
+  box-shadow: 1px 1px 1px 1px lightgrey;
 }
