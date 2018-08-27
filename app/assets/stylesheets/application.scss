@@ -20,11 +20,24 @@
    font-family: 'Slabo 13px', serif;
  }
 
+.sideMenu {
+  z-index:2;
+  position:fixed;
+  background-color:aliceblue;
+  width:30%;
+  opacity: 0.9;
+  padding:15px;
+  border-radius: 0px 15px 15px 0px;
+  display: none;
+}
+
 .navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   align-items: center;
-  box-shadow: 1px 1px 1px 1px lightgrey;
+  background-color: #fefefe;
+  opacity: 0.9;
+  z-index:1 !important;
 }
 
 .navLogo{
@@ -32,7 +45,13 @@
 }
 .navbar-start{
   align-items: center;
+}
 
+.navbarTitle {
+  transition: all 0.5s ease-in;
+}
+.navbarTitle:hover {
+  color: #3094cd;
 }
 
 .sign-in-link {
@@ -43,6 +62,7 @@
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
     transition-delay: 0s;
+
 }
 
 .navbar-menu {
@@ -66,8 +86,12 @@
   color: #000000c4;
 }
 
+.navbar-burger:hover {
+  background-color: aliceblue;
+}
+
 .navContainer {
-  margin-bottom: 7.0rem;
+  margin-bottom: 6rem;
 }
 
 .main-login-container {
@@ -117,6 +141,11 @@ background-color: #228be6;
 color: whitesmoke;
 transition: all 0.2s ease-in;
 padding: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 80vh;
+border-radius: 0px 0px 12px 12px;
 
 }
 .newUserIntroContainer a{
@@ -124,9 +153,16 @@ padding: 50px;
   border: 2px solid whitesmoke;
   border-radius: 3px;
   padding: 15px;
+  text-shadow: 1px 1px 1px darkgrey;
+  transition: all 0.3s ease-in;
 }
 
 .newUserIntroContainer a:hover{
-  color: #083964;
-  box-shadow: 1px 1px 1px 1px lightgrey;
+  background-color: whitesmoke;
+  color: #228be6;
+  box-shadow: 0px 2px 0px 0px lightgrey;
+}
+
+.have-account{
+  font-size:18px;
 }

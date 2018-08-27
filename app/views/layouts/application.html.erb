@@ -13,56 +13,80 @@
 
   <body>
     <div class="container navContainer">
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <%=image_tag image_path('photo_catcher_icon.png'), class:'navLogo' %>
-          <span class="navbarTitle">Photo Catcher</span>
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu">
-        <% if user_signed_in? %>
-        <div class="navbar-start">
-          <div class="navbar-item sign-in-link">
-            <%=link_to 'Profile', users_path%>
-            <%= fa_icon "address-card" %>
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <%=image_tag image_path('photo_catcher_icon.png'), class:'navLogo' %>
+              <span class="navbarTitle">Photo Catcher</span>
+            </a>
+            <% if user_signed_in? %>
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            <% end %>
           </div>
-          <div class="navbar-item sign-in-link">
-            <%=link_to 'Gallery', photos_path %>
-            <%=fa_icon "images" %>
-          </div>
-            </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <%= link_to 'My Account', edit_user_path(current_user) %>
-          </div>
-          <div class="navbar-item sign-in-link">
-            <%=link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-            <%=fa_icon 'sign-out-alt'%>
-          </div>
-          <% else %>
-          <div class="navbar-start">
-            <div class="navbar-item sign-in-link">
-              <%=link_to 'Sign In', new_user_session_path%>
-              <%=fa_icon "sign-in-alt"%>
-            </div>
-            <div class="navbar-item sign-in-link">
-              <%= link_to 'Create Account', new_user_registration_path%>
-              <%=fa_icon "user-circle" %>
-            </div>
+          <div class="navbar-menu">
+            <% if user_signed_in? %>
+              <div class="navbar-start">
+                <div class="navbar-item sign-in-link">
+                  <%=link_to 'Profile', users_path%>
+                  <%= fa_icon "address-card" %>
+                </div>
+                <div class="navbar-item sign-in-link">
+                  <%=link_to 'Gallery', photos_path %>
+                  <%=fa_icon "images" %>
+                </div>
+              </div>
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <%= link_to 'My Account', edit_user_path(current_user) %>
+                </div>
+                <div class="navbar-item sign-in-link">
+                  <%=link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                  <%=fa_icon 'sign-out-alt'%>
+                </div>
+              <% else %>
+                <div class="navbar-start">
+                  <div class="navbar-item sign-in-link">
+                    <%=link_to 'Sign In', new_user_session_path%>
+                    <%=fa_icon "sign-in-alt"%>
+                  </div>
+                  <div class="navbar-item sign-in-link">
+                    <%= link_to 'Create Account', new_user_registration_path%>
+                    <%=fa_icon "user-circle" %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
-        <% end %>
-      </div>
+      </nav>
+      <% if user_signed_in? %>
+        <div class="sideMenu is-mobile">
+          <div class="columns has-text-centered">
+            <div class="column is-quarter sign-in-link">
+              <%=link_to'Profile', users_path %>
+              <%=fa_icon "address-card" %>
+            </div>
+            <div class="column is-quarter sign-in-link">
+              <%=link_to 'Gallery', photos_path %>
+              <%= fa_icon 'images' %>
+            </div>
+            <div class="column is-quarter sign-in-link">
+              <%= link_to 'My Account', edit_user_path(current_user) %>
+            </div>
+            <div class="column is-quarter sign-in-link">
+              <%=link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+              <%=fa_icon 'sign-out-alt' %>
+            </div>
+
+          </div>
+        </div>
+      <% end %>
     </div>
-    </nav>
-  </div>
 
     <%= yield %>
 

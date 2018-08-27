@@ -38,6 +38,11 @@
 
 <% else %>
 <div class="container newUserIntroContainer is-size-4">
+<div class="columns has-text-centered is-centered">
+<div class="column is-one-quarter is-size-1">
+  <%= fa_icon 'camera-retro' %>
+</div>
+</div>
 <div class="columns has-text-left sign-up-row">
 <div class="column">Sign Up Now! Share your photos with the world!</div>
 </div>
@@ -47,8 +52,12 @@
 </div>
 </div>
 <div class="columns">
-<div class="column has-text-centered">
+<div class="column has-text-centered is-quarter">
   <%= link_to 'Create An Account!', new_user_registration_path %>
+</div>
+<div class="column has-text-centered is-quarter">
+  <span class="have-account"> Already Have An Account? </span>
+  <%= link_to 'Sign In!', new_user_session_path %>
 </div>
 </div>
 <% end %>
