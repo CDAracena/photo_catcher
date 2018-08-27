@@ -39,7 +39,9 @@
           <%= image_tag(photo.image, class:'photo') %>
           <% end %>
           <%= photo.title %> <%= link_to 'Edit', edit_photo_path(photo), class:'edit-link' %>
+          <%= link_to photo, method: :delete do %>
           <span> <%=fa_icon 'trash', class:'delete-photo'%> </span>
+          <% end %>
         </div>
         <% end %>
       </div>
