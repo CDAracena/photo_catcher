@@ -1,48 +1,56 @@
 <% if @user.id === current_user.id %>
-<div class="container">
-<div class="columns is-centered">
-  <div class="column is-three-fifths">
-    <%= image_tag(@user.avatar) %>
-    <%= form_for @user do |f|  %>
-    <div class="field">
-      <%= f.label :username %><br/>
-      <div class="control has-icons-left">
-        <%= f.text_field :username, class:'input'%>
-        <span class="icon is-small is-left">
-          <i class="fas fa-user-plus"> </i>
-        </span>
-      </div>
-    </div>
-    <div class="field">
-      <%= f.label :f_name, 'First Name' %><br/>
-      <div class="control has-icons-left">
-        <%= f.text_field :f_name, class:'input'%>
-        <span class="icon is-small is-left">
-          <i class="fas fa-user-plus"> </i>
-        </span>
-      </div>
-    </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <div class="columns has-text-centered">
+          <div class="column">
+            <%= image_tag(@user.avatar) %>
+          </div>
+        </div>
+        <%= form_for @user do |f| %>
+        <div class="field">
+          <%= f.label :username %><br/>
+          <div class="control has-icons-left">
+            <%= f.text_field :username, class:'input'%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-plus"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :f_name, 'First Name' %><br/>
+          <div class="control has-icons-left">
+            <%= f.text_field :f_name, class:'input'%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-plus"></i>
+            </span>
+          </div>
+        </div>
 
-    <div class="field">
-      <%= f.label :l_name, 'Last Name' %><br/>
-      <div class="control has-icons-left">
-        <%= f.text_field :l_name, class:'input'%>
-        <span class="icon is-small is-left">
-          <i class="fas fa-user-plus"> </i>
-        </span>
+        <div class="field">
+          <%= f.label :l_name, 'Last Name' %><br/>
+          <div class="control has-icons-left">
+            <%= f.text_field :l_name, class:'input'%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-plus"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <%=f.label :about, 'Tell us a little bit about yourself' %>
+          <div class="control">
+            <%= f.text_area :about, class:'textarea' %>
+          </div>
+        </div>
+        <div class="column has-text-centered">
+          <%= f.submit 'Submit Changes', class:'submit-changes-btn' %>
+          <span>
+            <%= link_to 'Change Password?', edit_user_password_path %>
+          <% end %>
+        </div>
       </div>
     </div>
-    <div class="field">
-      <%=f.label :about, 'Tell us a little bit about yourself' %>
-      <div class="control">
-        <%= f.text_area :about, class:'textarea' %>
-      </div>
-    </div>
-    <%= f.submit 'Submit Changes' %> <span> <%= link_to 'Change Password?', edit_user_password_path(@user) %>
-    <% end %>
-  </div>
-</div>
-<% else %>
-Nice Try Loser =\
-<% end %>
+  <% else %>
+    Nice Try Loser =\
+  <% end %>
 </div>

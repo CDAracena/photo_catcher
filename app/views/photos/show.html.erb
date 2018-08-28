@@ -22,7 +22,7 @@ Other Photos By:<%= link_to user_path(@photo.user) do %><%=@photo.user.username 
 <% @recent_photos.each do |recent_photo| %>
   <div class='column is-half'>
     <%= link_to photo_path(recent_photo) do %>
-    <%=image_tag(recent_photo.image) %>
+    <%=image_tag(recent_photo.image, class:'recent-photo') %>
   <% end %>
 </div>
 <% end %>
