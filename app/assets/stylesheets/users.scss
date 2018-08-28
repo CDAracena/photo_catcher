@@ -35,10 +35,28 @@
 
 .edit-link {
   float: right;
+  color: #3094cd;
 }
 
+.edit-link a:visited{
+  color: #3094cd;
+}
 .delete-photo:hover{
   cursor:pointer;
   color: red;
+}
 
+.submit-changes-btn{
+  padding: 15px;
+    border-radius: 3px;
+    background-color: #228be6;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    box-shadow: 1px 1px 1px 1px #228be65e;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+
+.submit-changes-btn:hover{
+  background-color: #083964;
 }
