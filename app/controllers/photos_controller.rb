@@ -30,9 +30,9 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
 
-    if Photo.find(params[:id]).user.photos.count > 2
+    @user_photos = Photo.find(params[:id]).user.photos
     @recent_photos = Photo.find(params[:id]).user.photos.first(2)
-  end
+
 
   end
 

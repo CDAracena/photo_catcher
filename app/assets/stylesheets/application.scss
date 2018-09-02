@@ -11,7 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bulma/css/bulma.css
- *= require bulma-toast/dist/css/bulma-toast.min.css
  *= require_tree .
  *= require_self
  */
@@ -85,9 +84,13 @@
 .navbar-menu a:hover {
   color: #000000c4;
 }
+.navbar-burger{
+  transition: all 0.5s ease-in-out;
+}
 
 .navbar-burger:hover {
   background-color: aliceblue;
+  transform: rotateZ(90deg);
 }
 
 .navContainer {
@@ -97,7 +100,6 @@
 .main-login-container {
   background-color: #228be6;
   color: whitesmoke;
-  height: 100vh;
   font-family: 'Slabo 13px', serif;
 }
 
@@ -169,4 +171,8 @@ border-radius: 0px 0px 12px 12px;
 
 .sign-in-intro{
   padding: 10px !important;
+}
+
+.zero-margin {
+  margin: 0px;
 }

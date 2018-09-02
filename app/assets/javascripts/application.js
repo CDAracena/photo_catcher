@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery/dist/jquery.min.js
-//= require bulma-toast/dist/js/bulma-toast.js
 //= require rails-ujs
 //= require_tree .
 

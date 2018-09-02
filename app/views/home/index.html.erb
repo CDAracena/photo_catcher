@@ -1,11 +1,11 @@
 <div class="container">
   <% if user_signed_in? %>
-    <div class="columns">
+    <div class="columns zero-margin">
       <div class="column">
         Most Recent Uploads
       </div>
     </div>
-    <div class="columns recentUploadsRow">
+    <div class="columns recentUploadsRow zero-margin">
       <% @photos.each do |photo| %>
         <div class="column is-one-quarter">
           <%= link_to photo_path(photo) do %>
@@ -17,12 +17,12 @@
     </div>
   <% end %>
 </div>
-<div class="columns">
+<div class="columns zero-margin">
   <div class="column">
     Newest Members
   </div>
 </div>
-<div class="columns has-text-centered recentUploadsRow">
+<div class="columns has-text-centered recentUploadsRow zero-margin">
   <% @users.each do |user| %>
     <div class="column is-one-third">
       <%= user.username %>
