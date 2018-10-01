@@ -101,7 +101,9 @@
   background-color: #228be6;
   color: whitesmoke;
   font-family: 'Slabo 13px', serif;
+  height: 100vh;
 }
+
 
 .intro-text-row{
 align-items: center;
@@ -136,6 +138,10 @@ align-items: center;
 
 .sign-in-sentence{
   color: #00000091;
+}
+
+.demo-credentials {
+  font-size: 1.2rem;
 }
 
 .newUserIntroContainer{
